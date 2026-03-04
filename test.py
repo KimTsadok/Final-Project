@@ -13,17 +13,27 @@ from google.cloud import storage
 # -----------------------------
 # Configuration
 # -----------------------------
-DEFAULT_BUCKET_NAME = "final-project-bucket1"
-DEFAULT_GCS_PREFIX = "uploads"
-DEFAULT_OUT_PATH = "VideoFeatures.json"
+# Load environment variables from a local .env file (if present).
+def load_dotenv(dotenv_path: str = ".env") -> None:
+    env_path = Path(dotenv_path)
+    if not env_path.exists():
+        return
 
-# NOTE: Keeping this here for now (prototype). Later you can move it to a permanent
-# Windows environment variable so you don't hardcode it in code.
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = (
-    r"C:\Users\Kim\OneDrive - Afeka College Of Engineering\Desktop\Final Project New\Final-Project\green-calling-481021-r2-23cfc870ab9c.json"
-)
+    for raw_line in env_path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        os.environ.setdefault(key, value)
 
 
+load_dotenv()
+DEFAULT_BUCKET_NAME = os.getenv("DEFAULT_BUCKET_NAME", "final-project-bucket1")
+DEFAULT_GCS_PREFIX = os.getenv("DEFAULT_GCS_PREFIX", "uploads")
+DEFAULT_OUT_PATH = os.getenv("DEFAULT_OUT_PATH", "VideoFeatures.json")
 # -----------------------------
 # Time conversion helpers
 # -----------------------------
