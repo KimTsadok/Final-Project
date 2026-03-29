@@ -1,0 +1,31 @@
+{
+  "video_id": "ACCEDE09230",
+  "video_uri": "gs://final-project-bucket1/uploads/ACCEDE09230.mp4",
+  "features_raw": {
+    "shot_frequency": 0.46601943557357034,
+    "object_entropy": 3.236849,
+    "interaction_density": 3.262136,
+    "human_presence_ratio": 0.932039
+  },
+  "features_norm": {
+    "shot_frequency": 0.23300971778678517,
+    "object_entropy": 0.80921225,
+    "interaction_density": 0.3262136,
+    "human_presence_ratio": 0.932039
+  },
+  "scene_complexity_score": 0.5232243087253747,
+  "scene_complexity_breakdown": {
+    "shot_frequency": 0.0815534012253748,
+    "object_entropy": 0.28322428749999995,
+    "interaction_density": 0.06524272,
+    "human_presence_ratio": 0.0932039
+  },
+  "narrative_phase": "Calm",
+  "phase_reasons": [
+    "Normalized values -> shot_frequency=0.2330, object_entropy=0.8092, interaction_density=0.3262",
+    "Dense rule not satisfied: object_entropy > 0.65 is True, interaction_density > 0.65 is False",
+    "Dynamic rule not satisfied: shot_frequency > 0.65 is False, interaction_density <= 0.65 is True",
+    "Static rule not satisfied: shot_frequency < 0.35 is True, interaction_density < 0.35 is True, object_entropy < 0.35 is False",
+    "Defaulted to Calm"
+  ]
+}

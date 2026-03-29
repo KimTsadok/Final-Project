@@ -1,0 +1,47 @@
+{
+  "video_uri": "gs://final-project-bucket1/uploads/ACCEDE09231.mp4",
+  "duration_seconds": 8.916666,
+  "shots": {
+    "count": 2,
+    "avg_shot_length": 4.4375,
+    "shot_variance": 1.128906,
+    "shot_lengths": [
+      5.5,
+      3.375
+    ]
+  },
+  "labels": {
+    "unique": [
+      "car",
+      "driving",
+      "family car",
+      "land vehicle",
+      "motor vehicle",
+      "vehicle",
+      "windshield"
+    ],
+    "count_unique": 7
+  },
+  "objects": {
+    "total_tracks": 16,
+    "object_frequency_distribution": {
+      "mirror": 7,
+      "luggage & bags": 3,
+      "person": 2,
+      "sunglasses": 2,
+      "top": 1,
+      "outerwear": 1
+    },
+    "top_objects": [
+      "mirror",
+      "luggage & bags",
+      "person",
+      "sunglasses",
+      "top",
+      "outerwear"
+    ],
+    "object_entropy": 2.224602,
+    "human_presence_ratio": 0.981308,
+    "interaction_density_tracks_per_sec": 1.794393
+  }
+}
