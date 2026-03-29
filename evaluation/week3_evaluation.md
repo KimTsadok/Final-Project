@@ -9,12 +9,13 @@ for each tested video, and compare the predicted narrative phase against a human
 
 ## Evaluation Table
 
-| video_id | expected_phase | predicted_phase | match | complexity_score | notes |
-|---------|----------------|-----------------|------------------|------|
-| ACCEDE09230 | Calm | Calm | Yes | 0.5232 | Quiet domestic living-room scene; high object diversity but low pace, so Calm is reasonable (visually rich but not dynamic) |
-| ACCEDE09231 | Calm | Calm | Yes | 0.3679 | Calm scene but still has movement, thus Calm and not Static, medium object entropy |
-| ACCEDE09232 | Static | Calm | No | 0.4226 | Low-motion scene; interaction density slightly above Static threshold, so classified as Calm; threshold may be too strict |
+## Evaluation Table
 
+| video_id | expected_phase | predicted_phase | match | complexity_score | notes |
+|----------|----------------|-----------------|-------|------------------|-------|
+| ACCEDE09230 | Calm | Calm | Yes | 0.5232 | Quiet domestic living-room scene; high object diversity but low pace, so Calm is reasonable (visually rich but not dynamic) |
+| ACCEDE09231 | Calm | Calm | Yes | 0.3679 | Calm scene but still has movement, thus Calm and not Static; medium object entropy |
+| ACCEDE09232 | Static | Calm | No | 0.4226 | Low-motion scene; interaction density slightly above Static threshold, so classified as Calm; threshold may be too strict |
 
 ## Notes
 - This evaluation is qualitative and meant as a Week 3 sanity check.
